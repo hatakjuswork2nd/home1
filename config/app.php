@@ -69,7 +69,7 @@ return [
     |
     */
 
-    'timezone' => 'Ashia/Tokyo',
+    'timezone' => 'Asia/Tokyo',
 
     /*
     |--------------------------------------------------------------------------
@@ -99,7 +99,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Faker Locale
+    | Faker Locfale
     |--------------------------------------------------------------------------
     |
     | This locale will be used by the Faker PHP library when generating fake
