@@ -13,9 +13,9 @@ npm install
 cmdでnpm run devしないといけないらしい(Tailwind CSSやVueなどの変更を自動でブラウザに反映してくれます)
 config/app.php内のtimezozneをAsia/Tokyoに、localeをjaに
 https://github.com/askdkc/breezejp
-https://textpro.addisteria.com/text/100/text-show
 VSC拡張機能laravel goto viwe
 laravelデバッグバー composer require barryvdh/laravel-debugbar
 @dump(auth::user()) primarykey制約 incrementign 数字が階段になる
 githubにアップされないファイルはグレーアウトしてる
 https://textpro.addisteria.com/text/109/text-show
+Attempt to read property "name" on null ログインしていないからuser=nameがnull
