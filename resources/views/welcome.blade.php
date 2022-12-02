@@ -44,7 +44,9 @@
                         </g>
                     </svg>
                 </div>
-
+<p>test@gmail</p>
+<p>testtest</p>
+<a href="127.0.0.1:8000">127.0.0.1:8000</a>
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
