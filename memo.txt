@@ -16,3 +16,4 @@ https://github.com/askdkc/breezejp
 https://textpro.addisteria.com/text/100/text-show
 VSC拡張機能laravel goto viwe
 laravelデバッグバー composer require barryvdh/laravel-debugbar
+@dump(auth::user()) primarykey制約 incrementign 数字が階段になる
