@@ -71,14 +71,14 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
         </div>
-
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
                 {{-- 条件文追加箇所二つ目 --}}
-                <div class="font-medium text-base text-gray-800">@if(Auth::check()) {{ Auth::user()->name }} @endif</div>
+                test
+                <div class="font-medium text-base text-gray-800">@if( Auth::check() ) {{ Auth::user()->name }} @endif</div>
                 {{-- 条件文追加箇所三つ目 --}}
-                <div class="font-medium text-sm text-gray-500">@if(Auth::check()) {{ Auth::user()->email }} @endif</div>
+                <div class="font-medium text-sm text-gray-500">@if( Auth::check() ) {{ Auth::user()->email }} @endif</div>
             </div>
 
             <div class="mt-3 space-y-1">

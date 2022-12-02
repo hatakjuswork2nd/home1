@@ -14,3 +14,5 @@ cmdでnpm run devしないといけないらしい(Tailwind CSSやVueなどの�
 config/app.php内のtimezozneをAsia/Tokyoに、localeをjaに
 https://github.com/askdkc/breezejp
 https://textpro.addisteria.com/text/100/text-show
+VSC拡張機能laravel goto viwe
+laravelデバッグバー composer require barryvdh/laravel-debugbar
