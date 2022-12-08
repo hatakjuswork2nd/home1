@@ -19,3 +19,6 @@ laravelデバッグバー composer require barryvdh/laravel-debugbar
 githubにアップされないファイルはグレーアウトしてる
 https://textpro.addisteria.com/text/109/text-show
 Attempt to read property "name" on null ログインしていないからuser=nameがnull
+登録したアカウントはgithubで共有されない？
+syntax error, unexpected variable スペルミスとか、;が足りてないとか
+php artisan make:component 名前　でapp/View/Componentsとresources/views/componentsにそれぞれファイルができる
