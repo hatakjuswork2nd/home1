@@ -22,3 +22,12 @@ Attempt to read property "name" on null ログインしていないからuser=na
 登録したアカウントはgithubで共有されない？
 syntax error, unexpected variable スペルミスとか、;が足りてないとか
 php artisan make:component 名前　でapp/View/Componentsとresources/views/componentsにそれぞれファイルができる
+ctrl+/コメントアウト
+ctrl+bs
+alt+↑↓
+ctrl+alt+↓↑
+ctrl+Fページ内検索
+ctrl+P全体検索
+ctrl+F2 選択ワードの全マッチを選択
+Shift+Alt+↓↑ 行を複製
+ctrl+B サイドバー

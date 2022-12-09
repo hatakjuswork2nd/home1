@@ -4,7 +4,8 @@
             投稿の新規作成
         </h2>
 
-
+        <x-input-error class="mb-4" :messages="$errors->all()"/>
+<x-message :message="session('message')" />
     </x-slot>
     
         {{-- 最初に作成した部分 --}}
