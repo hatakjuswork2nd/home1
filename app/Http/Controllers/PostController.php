@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts=Post::all();//モデル名::all() ：モデルに紐づいたデータベースのデータを全て取得
+        $posts=Post::orderBy('created_at','desc')->get();//モデル名::all() ：モデルに紐づいたデータベースのデータを全て取得。order順番。desc(descend)降りる
         $user=auth()->user();//auth()->user() ：ログイン中のユーザーを表す
         return view('post.index', compact('posts', 'user'));//view('ルート名', compact(変数名）)：表示する画面に変数を受け渡す。compact('posts', 'user') と入れると、['posts' => $posts, 'user' => $user]
     }
@@ -70,7 +70,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('post.show', compact('post'));
     }
 
     /**

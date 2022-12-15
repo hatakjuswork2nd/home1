@@ -5,18 +5,27 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                    <a href="{{ route('post.index') }}">
+                    <img src="{{asset('logo/logo.png')}}" style="max-height:80px;">
+                    <!-- <x-application-logo class="block h-9 w-auto fill-current text-gray-800" /> -->
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('post.index')" :active="request()->routeIs('post.index')">
+                        HOME
+                    </x-nav-link>
+                    <x-nav-link :href="route('post.create')" :active="request()->routeIs('post.create')">
+                        新規作成
+                    </x-nav-link>
+                </div>
+                <!-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -64,14 +73,23 @@
         </div>
     </div>
 
-    @dump(Auth::user())
+    <!-- @dump(Auth::user()) -->
     <!-- Responive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+        <div class="pt-2 pb-3 space-y-1">
+            <x-responsive-nav-link :href="route('post.index')" :active="request()->routeIs('post.index')">
+                HOME
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('post.create')" :active="request()->routeIs('post.create')">
+                新規作成
+            </x-responsive-nav-link>
+        </div>
+    <!-- <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-        </div>
+        </div> -->
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
