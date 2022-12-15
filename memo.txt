@@ -36,3 +36,4 @@ value="{{old('title')}}"
 {{old('body')}} 投稿エラーが出た時に入力内容が消えないようにするやつ
 
 php artisan storage:linkシンボリックリンクのために1回だけ
+https://textpro.addisteria.com/text/117/text-show
