@@ -31,3 +31,8 @@ ctrl+P全体検索
 ctrl+F2 選択ワードの全マッチを選択
 Shift+Alt+↓↑ 行を複製
 ctrl+B サイドバー
+
+value="{{old('title')}}"
+{{old('body')}} 投稿エラーが出た時に入力内容が消えないようにするやつ
+
+php artisan storage:linkシンボリックリンクのために1回だけ

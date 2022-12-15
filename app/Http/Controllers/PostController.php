@@ -14,7 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts=Post::all();//モデル名::all() ：モデルに紐づいたデータベースのデータを全て取得
+        $user=auth()->user();//auth()->user() ：ログイン中のユーザーを表す
+        return view('post.index', compact('posts', 'user'));//view('ルート名', compact(変数名）)：表示する画面に変数を受け渡す。compact('posts', 'user') と入れると、['posts' => $posts, 'user' => $user]
     }
 
     /**
@@ -44,6 +46,12 @@ class PostController extends Controller
         $post->title=$request->title;/** 新しい$postモデルの中のtitleを指します=フォームから投稿された件名（title）の中身*/
         $post->body=$request->body;
         $post->user_id=auth()->user()->id;/**３行目の$post->user_id には、投稿者のidが入るようにします。        auth()->user()->id とすると、認証済みのログイン中のユーザーのid が入ります。 */
+        if (request('image')){//「もし送信されたデータの中にimageがあれば、次の処理を行う
+            $original = request()->file('image')->getClientOriginalName();//① 元々のファイル名を取得し、これを$originalに代入する
+            $name = date('Ymd_His').'_'.$original;//日時秒と$originalを統合して$nameに代入
+            request()->file('image')->move('storage/images', $name);//② $nameの名前で画像ファイルを指定した場所に保存する
+            $post->image = $name;//$post->image はpostsテーブルのimageカラム。③ $nameの名前で画像ファイルのファイル名をデータベースに保存する
+        }
         $post->save();/**新しく作成したインスタンスがデータベースに保存されます。 */
         return redirect()->route('post.create')->with('message', '投稿を作成しました');
         /**return redirect()->route('post.create');ルート名がpost.indexのページにリダイレクトするという意味です/
