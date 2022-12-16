@@ -5,6 +5,7 @@ xampp鯖のURL http://localhost/laravel/プロジェクト名/public
 新規作成→プロジェクト名を入力。utf8mb4_general_ci
 .envファイルを編集
 14行目DB_DATABASEを変更
+php artisan serve
 php artisan migrateを実行してデータベースに反映
 認証機能
 composer require laravel/breeze --dev
