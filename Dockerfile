@@ -2,6 +2,7 @@ FROM node:16-slim as node-builder
 
 COPY . ./app
 RUN cd /app 
+WORKDIR /usr/app
 RUN npm install --legacy-peer-deps
 RUN npm run prod
 
