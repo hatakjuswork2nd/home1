@@ -4,6 +4,8 @@ FROM node:16-slim as node-builder
 WORKDIR /usr/app
 COPY ./ /usr/app
 RUN npm install --legacy-peer-deps
+WORKDIR /usr/app
+COPY ./ /usr/app
 RUN npm run prod
 
 
