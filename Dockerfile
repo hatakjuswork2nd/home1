@@ -1,4 +1,4 @@
-FROM node:16-slim as node
+FROM node:16.17.1-slim as node
 
 
 WORKDIR /usr/app
@@ -9,7 +9,7 @@ COPY ./ /usr/app
 RUN npm run dev
 
 
-FROM php:8.1.5-apache
+FROM php:8.2-apache
 
 RUN apt-get update && apt-get install -y \
   zip \
